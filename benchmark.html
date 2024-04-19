@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz epicode</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body id="benchmark">
+    
+
+
+    <div class="quiz">
+        <div id="container">
+            <canvas id="countdownCanvas" width="200" height="200"></canvas>
+        </div>
+        <div class="imgDiv">
+            <img class="logoEpicode" src="./img/epicode_logo.png" alt="logo di epicode">
+            <div id="timerContainer"> <!-- Aggiunto un div per contenere il timer -->
+                <div id="timer"></div>
+            </div>
+        </div>
+    
+        <h2 id="question">le domande vengono visualizzate qui</h2>
+        <div id="answer-buttons">qui vengono visualizzati i bottoni con le risposte</div><!--div per i bottoni delle risposte-->
+        
+        <div id="controls">
+            <p id="number-question"></p><!--paragrafo per indice domanda attuale(Question 1/10...2/20 ecc)-->
+            <button id="next-btn">NEXT →</button>
+        </div>
+    </div>
+
+
+
+<script src="./js/scriptBenchmark.js"></script>
+
+    
+</body>
+</html>

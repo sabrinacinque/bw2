@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowScore benchmark</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script language="javascript" src="https://www.iolecal.it/blog/posts200/post215/JSFX215_Layer.js"></script>
+    <script language="javascript" src="https://www.iolecal.it/blog/posts200/post215/JSFX215_Browser.js"></script>
+    <script language="javascript" src="https://www.iolecal.it/blog/posts200/post215/JSFX215_Falling.js"></script>
+
+</head>
+<body>
+    
+    <body id="showScore">
+        
+
+        <div id="divIMG">
+            <img class="logoEpicode" src="./img/epicode_logo.png" alt="logo di epicode">
+        </div>
+    
+        <div  id="results">
+            <h1>Results</h1>
+            <h3>The summary of your answers : </h3>
+        </div>
+        
+        <div id="risultato">
+            <div class="percentuali">
+                <h2 class="correctWrong">Correct<br>
+                <span id="correct-score">--</span>
+                <p id="correct-questions"></p>
+            </div>
+            <div>
+                <canvas id="canvas" width="400" height="400"></canvas>
+            </div>
+            <div class="percentuali">
+                <h2 class="correctWrong">Wrong<br>
+                    <span id="wrong-score">--</span>
+                    <p id="wrong-questions"></p>
+            </div>
+        </div>
+    
+        
+        <button id="buttonRateUs" onclick="gotoFeedbackPage()">RATE US</button>
+        <canvas id="confetti-canvas"></canvas> <!-- Elemento canvas per i coriandoli -->
+
+        <script src="./js/scriptRisultati.js"></script>
+
+    </body>
+
+</html>

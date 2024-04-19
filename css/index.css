@@ -1,0 +1,375 @@
+
+/**********************CSS PER PAGINA INIZIALE*******************************/
+body,#benchmark{/*raggruppo css uguali*/
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    margin: 0;
+    padding: 0;
+    color: white;   
+}
+
+body:not(#benchmark,#showScore){
+    padding-left:4rem;
+}
+
+.logo,.logoEpicode {
+    margin-top: 2rem;/* Spostato più in basso rispetto all'h1 */
+    width: 7rem; 
+    height: auto; 
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 4rem; /* Ingrandito il testo */
+    margin-top: 7rem; /* Spostato più in basso rispetto all'immagine */
+    margin-bottom: 1rem;
+}
+
+
+#instructions {
+    color: #d20094;    
+}
+
+p {
+    top: 0; /* Imposta il margine superiore a zero */
+  }
+
+ul {
+    margin-top: 4rem;
+}
+
+.checkbox {
+    margin-top: 7rem;
+    
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgb(247, 241, 241);
+    background-color: transparent;
+  }
+  
+  /* Stile quando la checkbox è selezionata */
+  input[type="checkbox"]:checked {
+    background-color: #d20094;
+  }
+
+  input[type="checkbox"]:checked ~ label {
+    color: #00FFFF;
+}
+
+
+  #buttonProceed,#moreInfo {
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px darkturquoise; /* Aggiunto box-shadow */
+    background-color: darkturquoise; /* colore di sfondo */
+    color:#0B113B;
+    padding: 15px 32px;
+    cursor: pointer;
+    margin-bottom: 6rem;
+}
+
+#buttonProceed{
+    float:inline-end;
+    margin-right: 2rem;
+}
+
+
+#buttonProceed:hover ,#moreInfo:hover{
+    box-shadow: 0 0 30px darkturquoise; /* Aggiunto box-shadow */
+}
+
+/************************************CSS PER BENCHMARCK**************************************/
+
+#benchmark {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra l'intero contenuto verticalmente */
+    height: 100vh;
+    padding: 0 2rem;
+}
+
+.quiz {
+    margin-top: 15rem;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Imposta una larghezza fissa per il contenitore */
+}
+
+
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Due colonne di larghezza uguale */
+    gap: 1em; /* Spazio tra i bottoni */
+    justify-content: center; /* Centra i bottoni sull'asse x */
+}
+
+.logoEpicode
+{
+    position: absolute; /* Posiziona l'elemento in modo assoluto rispetto al contenitore padre */
+    top:0;
+    left: 4rem; /* Posiziona l'elemento a sinistra */
+    height: auto;
+}
+
+
+h2:not(#instructions){/*tranne per l'h2 instructor sulla pagina principale*/
+    color: white;
+    margin-bottom: 4rem;
+}
+
+
+#question{
+    font-size: 2rem;/*corrispondono a 60 px*/
+}    
+
+
+#number-question {
+    color: white;
+    text-align: left; /* Allinea il testo a sinistra */
+    margin: 0; /* Rimuove il margine predefinito */
+    margin-top:3rem;
+}
+
+#controls {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%; /* Assicura che il div si estenda per tutta la larghezza */
+}
+
+#next-btn {
+    background-color: transparent; /* Rimuove il colore di sfondo */
+    border: none; /* Rimuove il bordo */
+    margin-left: auto;
+    margin-top: 3rem;
+    color: white; /* Imposta il testo in bianco */
+    border:2px solid white;
+    padding:1rem 2rem;
+}
+
+#next-btn:hover{
+    background-color: #D20094;
+    cursor: pointer;
+    
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.1); /* Sfondo bianco con opacità del 10% */
+    width: 100%; /* Larghezza del 100% per adattarsi alle colonne */
+    height: 50px; /* Altezza fissa per i bottoni */
+    margin-bottom: 10px; /* Spazio inferiore tra i bottoni */
+    color: white;
+    border-radius: 25px; /* Arrotonda completamente i bordi */
+    border-top: 2px solid rgb(255, 255, 255,0.7); /* Bordo bianco con opacità del 20% sopra */
+    border-left: 2px solid rgb(255, 255, 255,0.5); /* Bordo bianco con opacità del 20% sopra */
+    border-right: 2px solid rgb(255, 255, 255,0.5); /* Bordo bianco con opacità del 20% sopra */
+    border-bottom: none;
+    overflow: hidden; /* Nasconde qualsiasi contenuto al di fuori del bordo */
+    
+}
+
+.btn:hover,.btn.selected {
+    background-color: #D20094;
+    border-bottom : 2px solid #900080;
+}
+
+
+
+
+.question-count { /*colore sulla parte in basso , dove mette su quale domanda ci troviamo tipo question 1/10*/
+    color:  #900080;
+    font-weight:900;
+}
+
+
+
+
+/******************************************CSS per timer DEL BENCHMARK**************************************************************/
+#container {
+    color: white;
+    position: absolute; 
+    top: 0; /* Posiziona l'elemento all'inizio della pagina */
+    right: 0; /* Posiziona l'elemento a sinistra */
+    margin-top: 2rem;
+    padding-right:20px;
+    
+    
+}
+
+
+
+#timer {
+    font-size: 2rem;
+}
+
+/**********************************************CSS PER PAGINA SHOWSCORE***********************************************/
+#results{
+    text-align: center;
+}
+
+
+#risultato > div {
+    float: left; /* Allinea i div a sinistra */
+    width: calc(33.33% - 0.625rem); /* Imposta la larghezza in base alla percentuale e sottrae lo spazio per il margine */ 
+    text-align: center; /* Allinea il testo al centro all'interno del div */
+    
+}
+
+.correctWrong {
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#correct-score, #wrong-score {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#correct-questions, #wrong-questions {
+    padding-top: 0;
+    margin-top: 0;
+    font-weight: 0;
+}
+
+.percentuali {
+    padding-top: 150px;
+}
+
+#buttonRateUs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-55%);
+    background-color: transparent;
+    font-size: 1rem;
+    color: white;
+    padding: 18px 58px;
+    border: 3px solid white;
+    cursor: pointer;
+    box-shadow: 0 0 20px #1c2fbf;
+}
+
+#risultato {
+    position: relative; /* Imposta il contenitore dei risultati come relativo */
+    margin-bottom: 30rem;
+}
+
+
+#buttonRateUs:hover {
+    box-shadow: 0 0 10px darkturquoise;
+    background-color: turquoise;
+}
+
+
+/***********************************************CSS PER PAGINA FEEDBACK****************************************************/
+
+
+main {
+    text-align: center;
+}
+
+h1 {
+    font-family: "Outfit", sans-serif;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 2em;
+}
+label,p {
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+fieldset {
+    border: 0;
+    margin-top: 20px;
+}
+
+
+input[type="text"] {
+    width: 35em;
+    border: none;
+    background: none;
+    color: white;
+    border: 0;
+    outline: 0;
+}
+
+
+#moreInfo {/*bottone more info*/   
+    font-size: large;
+    margin-top: 30px;
+    padding: 10px 20px;     
+}
+
+
+#linea {
+    margin: auto;
+    margin-top: 5px;
+    width: 32em;
+    border-top: 1px solid  #C2128D;
+}
+
+#starContainer {
+    position: relative;
+    width: 80%;
+    background: none;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#starContainer .star-widget input {
+        display: none;
+    }
+
+.star-widget label {
+    font-size: 40px;
+    color: #282a39;
+    padding: 10px;
+    float: right;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+    color: #00FFFF;
+}
+
+input:checked ~ label {
+    color: #00FFFF;
+}
+
+input#rate-10:checked ~ label {
+    color: #00FFFF;
+    text-shadow: 0 0 20px rgb(193, 224, 37);
+}
